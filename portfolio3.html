@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/66c19fbac3.js" crossorigin="anonymous"></script>
+  <link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square.css" rel="stylesheet">
+  <link rel="stylesheet" href="portfolio3.css">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <section class="menu">
+
+    <div class="menu-home">
+      <div>Home</div><i class="fas fa-home"></i>
+    </div>
+
+    <div class="menu-head">
+      <div>Services</div><i class="fas fa-headphones"></i>
+    </div>
+
+    <div class="menu-flag">
+      <div>Alert</div><i class="fas fa-flag"></i>
+    </div>
+
+    <div class="menu-chart">
+      <div>Stats</div><i class="fas fa-chart-pie"></i>
+    </div>
+
+  </section>
+
+  <div class="main-wrap">
+
+    <section class="search">
+
+      <div class="search-bar-left">
+        <input type="search" name="" id="" placeholder="Search"><button><i class="fas fa-search"></i></button>
+      </div>
+
+      <div class="search-bar-right">
+
+        <div>
+          <i class="fas fa-bell"></i>
+          <div class="search-bar-right-alarm1">5</div>
+        </div>
+
+        <div>
+          <i class="fas fa-envelope"></i>
+          <div class="search-bar-right-alarm2">3</div>
+        </div>
+        
+        <span>Minny Park</span>
+      </div>
+
+    </section>
+
+
+    <section class="dashboard">
+
+      <p>Dashboard</p>
+
+      <div class="dashboard-card">
+        <div class="dashboard-card1">
+          <div>
+            <p>Earnings (Monthly)</p>
+            <p>$400,000</p>
+          </div>
+          <i class="fas fa-calendar"></i>
+        </div>
+
+        <div class="dashboard-card2">
+          <div>
+            <p>Earnings (Annual)</p>
+            <p>$800,000</p>
+          </div>
+          <i class="fas fa-dollar-sign"></i>
+        </div>
+
+        <div class="dashboard-card3">
+          <div>
+            <p>Tasks</p>
+            <p>13</p>
+          </div>
+          <i class="fas fa-tasks"></i>
+        </div>
+
+        <div class="dashboard-card4">
+          <div>
+            <p>Requests</p>
+            <p>26</p>
+          </div>
+          <i class="fas fa-comments"></i>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <section class="gragh-tasks">
+
+      <div class="gragh">
+
+        <div class="gragh-title">
+          Earnings Overview
+        </div>
+
+        <div class="gragh-gragh">
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js"></script>
+
+        <canvas id="myChart" width="480" height="300""></canvas>
+        <script>
+          const ctx = document.getElementById('myChart').getContext('2d');
+          const myChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+              labels: ['January', 'February', 'March', 'April', 'May', 'June' , 'July'],
+              datasets: [{
+                label: '# of Votes',
+                data: [0, 10, 5, 3, 20, 30, 45],
+                fill: true,
+                tension: 0.3,
+                // borderCapStyle:'butt' ,
+                backgroundColor: [
+                  '#4b4eb4',
+                  'rgba(54, 162, 235, 0.2)',
+                  'rgba(255, 206, 86, 0.2)',
+                  'rgba(75, 192, 192, 0.2)',
+                  'rgba(153, 102, 255, 0.2)',
+                  'rgba(255, 159, 64, 0.2)'
+                ],
+                borderColor: [
+                  '#4b4eb4',
+                  'rgba(54, 162, 235, 1)',
+                  'rgba(255, 206, 86, 1)',
+                  'rgba(75, 192, 192, 1)',
+                  'rgba(153, 102, 255, 1)',
+                  'rgba(255, 159, 64, 1)'
+                ],
+                borderWidth: 1
+              }]
+            },
+            options: {
+              scales: {
+                y: {
+                  beginAtZero: true
+                }
+              }
+            }
+          });
+        </script>
+        </div>
+
+      </div>
+
+
+  <div class=" tasks">
+    <div class="tasks-title">
+      Tasks
+    </div>
+    <p><span>Borrowed Items</span><span>14</span></p>
+    <p><span>Trello requests</span><span>2</span></p>
+    <p><span>Marked Comments</span><span>1</span></p>
+      </div>
+
+    </section>
+
+
+
+
+
+
+  </div>
+
+
+
+
+
+</body>
+
+</html>
