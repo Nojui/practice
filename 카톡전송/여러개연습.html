@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+    integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="여러개연습.css">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <div class="left-menu">
+    <p>Menu Title</p>
+  </div>
+
+
+
+
+
+  <div class="black-bg">
+    <div class="white-bg">
+      <p>로그인 하세요</p>
+
+      <form action="login.php" class="form-submit">
+        <div class="form-group">
+          <input type="email" class="form-control form-email" placeholder="Email">
+          <p class="email-alert">이메일이 정확해야 합니다.</p>
+          <p class="email-alert2">이메일을 입력하세요.</p>
+        </div>
+        <div class="form-group">
+          <input type="password" class="form-control form-password" placeholder="Password">
+          <p class="password-alert">비밀번호를 입력하세요</p>
+        </div>
+        <button type="submit" class="btn btn-primary">제출</button>
+      </form>
+      <button class="btn btn-danger btn-form-close">닫기</button>
+
+    </div>
+  </div>
+
+  <div class="nav-bar">
+    <h4 class="nav-text-l" style="margin: 0;">안녕하세요</h4>
+    <a href="#" class="nav-bar-btn">Products</a>
+  </div>
+
+  <ul class="list-group nav-sub">
+    <li class="list-group-item">Outer</li>
+    <li class="list-group-item">Shirts</li>
+    <li class="list-group-item">socks</li>
+  </ul>
+
+
+  <div class="jumbotron main-background">
+    <h1 class="display-4">안녕하세요</h1>
+    <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to
+      featured content or information.</p>
+    <hr class="my-4">
+    <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+    <a class="btn btn-primary btn-lg btn-jumbo" href="#" role="button">Log in</a>
+    <a class="btn btn-danger btn-lg show-menu" href="#" role="button">Show Menu</a>
+  </div>
+
+
+  <h4 class="my-4 text-center">Showcase</h4>
+
+  <div style="overflow: hidden; position:relative">
+    <div class="slide-container">
+      <div class="slide-box">
+        <img src="붕어빵.png" alt="">
+      </div>
+
+      <div class="slide-box">
+        <img src="삼겹살.png" alt="">
+      </div>
+
+      <div class="slide-box">
+        <img src="오뎅.png" alt="">
+      </div>
+    </div>
+    <button class="img-slide-btn slide-btn1">Next</button>
+    <button class="img-slide-btn slide-btn2">Before</button>
+  </div>
+
+  <button class="slide-1">1</button>
+  <button class="slide-2">2</button>
+  <button class="slide-3">3</button>
+
+  <div class="my-5"></div>
+  <!-- 탭 -->
+  <style>
+    ul.list {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      border-bottom: 1px solid #ccc;
+    }
+
+    ul.list::after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+
+    .tab-button {
+      display: block;
+      padding: 10px 20px 10px 20px;
+      float: left;
+      margin-right: -1px;
+      margin-bottom: -1px;
+      color: grey;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .active {
+      border-top: 2px solid orange;
+      border-right: 1px solid #ccc;
+      border-bottom: 1px solid white;
+      border-left: 1px solid #ccc;
+      color: black;
+      margin-top: -2px;
+    }
+
+    .tab-content {
+      display: none;
+      padding: 10px;
+    }
+
+    .show {
+      display: block;
+    }
+  </style>
+
+
+  <div class="container mt-5">
+    <ul class="list">
+      <li class="tab-button" data-id="0">Products</li>
+      <li class="tab-button active" data-id="1">Information</li>
+      <li class="tab-button" data-id="2">Shipping</li>
+    </ul>
+
+    <div class="tab-content">
+      <p>상품설명입니다. Product</p>
+    </div>
+    <div class="tab-content show">
+      <p>상품정보입니다. Info</p>
+    </div>
+    <div class="tab-content">
+      <p>배송정보입니다. Shipping</p>
+    </div>
+  </div>
+  <!-- 탭end -->
+  <div class="my-5"></div>
+
+
+  <!-- jquery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <!-- boot -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+    crossorigin="anonymous"></script>
+
+  <script src="여러개연습.js"></script>
+  <script>
+    // 폼 스크립트
+    $('.form-submit').on('submit', function (e) {
+
+      var 이메일 = $('.form-email').val()
+      var 비밀번호 = $('.form-password').val()
+      var 정규식 = /[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]$/i.test(이메일)
+      var 비밀번호정규식 = /[A-Z]+/.test('비밀번호')
+      // /(?=.*[a-z])(?=.*[A-Z])/
+
+      if (이메일 == '') {
+        e.preventDefault();
+        $('.email-alert2').show();
+      } else if (정규식 == false) {
+        e.preventDefault();
+        $('.email-alert').show();
+      };
+
+      if (비밀번호정규식 == false) {
+        e.preventDefault();
+        $('.password-alert').show();
+      };
+
+      //   if ($('.form-email').val() == '') {
+      //     e.preventDefault();
+      //     $('.email-alert').show();
+      //   };
+
+      //   if ($('.form-password').val() == '') {
+      //     e.preventDefault();
+      //     $('.password-alert').show();
+      //   };
+
+    });
+
+    // /abc/.test('abc')
+    // /\S+@\S+\.\S+/.test('sdlfj@sdlkjf.com')
+
+
+
+
+    // modal
+    $('.btn-jumbo').on('click', function () {
+      $('.black-bg').addClass('slide-down');
+    });
+    
+    $('.btn-form-close').on('click', function () {
+      // $('.black-bg').fadeToggle();
+      $('.black-bg').removeClass('slide-down');
+    });
+
+    $('.black-bg').click(function(e){
+      if(e.target == e.currentTarget){
+      $(this).removeClass('slide-down');
+      }
+    });
+
+    // nav toggle
+    $('.nav-bar-btn').click(function () {
+      $('.nav-sub').slideToggle();
+    });
+
+    // 애니메이션
+
+    $('.show-menu').click(function () {
+      $('.left-menu').animate({ marginLeft: '0px' })
+    });
+
+    //  슬라이드 -> 이것도 이미지슬라이드처럼 축약가능
+    $('.slide-1').click(function () {
+      $('.slide-container').css('transform', 'translateX(0vw)');
+      지금사진넘버 = 1
+    });
+    $('.slide-2').click(function () {
+      $('.slide-container').css('transform', 'translateX(-100vw)');
+      지금사진넘버 = 2
+    });
+    $('.slide-3').click(function () {
+      $('.slide-container').css('transform', 'translateX(-200vw)');
+      지금사진넘버 = 3
+    });
+
+    // 이미지안의 슬라이드
+    var 지금사진넘버 = 1;
+    $('.slide-btn1').click(function () {
+      if (지금사진넘버 < 3) {
+        $('.slide-container').css('transform', 'translateX(-' + 지금사진넘버 + '00vw)')
+        지금사진넘버 = (지금사진넘버 + 1);
+      }
+      // if (지금사진넘버 == 1) {
+      //   $('.slide-container').css('transform', 'translateX(-100vw)');
+      //   지금사진넘버 = 지금사진넘버 + 1;
+      // } else if (지금사진넘버 == 2){
+      //   $('.slide-container').css('transform', 'translateX(-200vw)');
+      //   지금사진넘버 = 3;
+      // } else if (지금사진넘버 == 3){
+      //   $('.slide-container').css('transform', 'translateX(0vw)');
+      //   지금사진넘버 = 1;
+      // }
+    });
+
+    $('.slide-btn2').click(function () {
+      if (지금사진넘버 > 1) {
+        $('.slide-container').css('transform', 'translateX(-' + (지금사진넘버 - 2) + '00vw)')
+        지금사진넘버 = (지금사진넘버 - 1);
+      }
+    });
+
+
+    // nav-bar fix
+    $(window).on('scroll', function () {
+      if ($(window).scrollTop() > 100) {
+        $('.nav-bar').addClass('nav-bar-scroll');
+        $('.nav-bar h4').addClass('nav-text-s');
+      } else {
+        $('.nav-bar').removeClass('nav-bar-scroll')
+        $('.nav-bar h4').removeClass('nav-text-s')
+      }
+    });
+
+
+
+
+
+    // 369게임
+
+    // function 삼육구(n) {
+    //   if (n % 9 == 0) {
+    //     console.log("박수x2");
+    //   }
+
+    //   else if (n % 3 == 0) {
+    //     console.log("박수");
+    //   } else {
+    //     console.log(n);
+    //   }
+    // };
+
+    // 삼육구(3);
+
+
+    // 이자율
+    //     function 이자율(예금액, 년) {
+    // var 미래예금액 = (년 * 0.2) * 예금액;
+    // var 미래예금액2 = (년 * 0.15) * 예금액;
+    //       if (예금액 >= 50000) {
+    //         console.log(미래예금액 + 예금액)
+    //       } else{
+    //         console.log(미래예금액2 + 예금액)
+    //       }
+    //     }
+    //     이자율(50000, 1)
+
+    // 마신커피양
+      // var 처음주문량 = 360;
+      // var 첫번째리필량 = (처음주문량 * 2 / 3);
+      // var 두번째리필량 = (첫번째리필량 * 2 / 3);
+      // var 최종커피량 = (처음주문량 + 첫번째리필량 + 두번째리필량)
+      // console.log(최종커피량)
+
+  </script>
+
+</body>
+
+</html>
